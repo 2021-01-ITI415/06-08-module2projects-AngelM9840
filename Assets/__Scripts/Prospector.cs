@@ -23,6 +23,12 @@ public class Prospector : MonoBehaviour {
 	void Start() {
 		deck = GetComponent<Deck> ();
 		deck.InitDeck (deckXML.text);
-	}
+		Deck.Shuffle(ref deck.cards);
 
+		Card c;  //调用Card脚本类
+        for(int cNum=0; cNum<deck.cards.Count; cNum++) {  //把洗牌后的卡，放到新的位置
+             c = deck.cards[cNum];
+             c.transform.localPosition = new Vector3((cNum%13)*3, cNum/13*4, 0);
+         }
+	}
 }
