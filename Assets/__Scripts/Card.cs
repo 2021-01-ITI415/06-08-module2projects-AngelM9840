@@ -70,6 +70,10 @@ public class Card : MonoBehaviour {
 	void Update () {
 	
 	}
+
+	virtual public void OnMouseUpAsButton() {
+        print(name);
+    }
 } // class Card
 
 [System.Serializable]
