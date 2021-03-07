@@ -102,6 +102,7 @@ public class Prospector : MonoBehaviour {
 
 		MoveToTarget(Draw ());
 		UpdateDrawPile();
+        ScoreManager.EVENT(eScoreEvent.draw);
 	}
 
     CardProspector FindCardByLayoutID(int layoutID) {
@@ -195,6 +196,7 @@ public class Prospector : MonoBehaviour {
                 tableau.Remove(cd);
                 MoveToTarget(cd);
                 SetTableauFaces();
+                ScoreManager.EVENT(eScoreEvent.mine);
 			    break;
 		}
         CheckForGameOver();
@@ -218,9 +220,11 @@ public class Prospector : MonoBehaviour {
 
     void GameOver(bool won) {
         if (won) {
-            print ("Game Over. You won! :");
+            //print ("Game Over. You won! :");
+            ScoreManager.EVENT(eScoreEvent.gameWin);
         } else {
-            print ("Game Over. You Lost. :");
+            //print ("Game Over. You Lost. :");
+            ScoreManager.EVENT(eScoreEvent.gameLoss);
         }
         SceneManager.LoadScene("__Prospector_Scene_0");
     }
