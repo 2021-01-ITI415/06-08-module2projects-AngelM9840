@@ -8,7 +8,7 @@ public enum eScoreEvent {
     mineGold,
     gameWin,
     gameLoss
-}
+    }
 
 public class ScoreManager : MonoBehaviour {
 
