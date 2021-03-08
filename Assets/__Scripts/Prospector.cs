@@ -234,6 +234,7 @@ public class Prospector : MonoBehaviour {
                 MoveToTarget(cd);
                 SetTableauFaces();
                 ScoreManager.EVENT(eScoreEvent.mine);
+                FloatingScoreHandler(eScoreEvent.mine);
 			    break;
 		}
         CheckForGameOver();
