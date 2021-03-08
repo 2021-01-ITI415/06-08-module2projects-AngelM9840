@@ -232,10 +232,18 @@ public class Prospector : MonoBehaviour {
 
                 tableau.Remove(cd);
                 MoveToTarget(cd);
+                //GOLDCARDSTUFF
                 SetTableauFaces();
-                ScoreManager.EVENT(eScoreEvent.mine);
+                if (cd.isGold)
+                {
+                    ScoreManager.EVENT(eScoreEvent.mineGold);
+                }
+                else
+                {
+                    ScoreManager.EVENT(eScoreEvent.mine);
+                }
                 FloatingScoreHandler(eScoreEvent.mine);
-			    break;
+                break;
 		}
         CheckForGameOver();
     }

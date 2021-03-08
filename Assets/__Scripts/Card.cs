@@ -17,6 +17,10 @@ public class Card : MonoBehaviour {
 
 	public SpriteRenderer[] spriteRenderers;
 
+	//GOLD CARD STUFF
+	public bool isGold;
+
+
 	// Use this for initialization
 	void Start () {
         SetSortOrder(0);
