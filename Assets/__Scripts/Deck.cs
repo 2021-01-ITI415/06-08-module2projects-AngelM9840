@@ -162,6 +162,8 @@ public class Deck : MonoBehaviour {
 			bool isGold = Random.value < 0.05f;
 
         	cgo.GetComponent<SpriteRenderer>().sprite = isGold ? cardFrontGold : cardFront;
+			//GoldCardBack
+			//cgo.GetComponent<SpriteRenderer>().sprite = isGold ? cardBackGold : cardBack;
 
 			cgo.transform.parent = deckAnchor;
 			Card card = cgo.GetComponent<Card>();
