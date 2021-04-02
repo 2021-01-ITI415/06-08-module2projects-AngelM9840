@@ -5,7 +5,7 @@ using UnityEngine;
 public enum eScoreEvent {
     draw,
     mine,
-    mineGold,
+    //mineGold,
     gameWin,
     gameLoss
     }
@@ -60,10 +60,10 @@ public class ScoreManager : MonoBehaviour {
                 scoreRun += chain;
                 break;
             //GOLDCARDSTUFF
-            case eScoreEvent.mineGold:
-                chain = chain * 2;
-                scoreRun += chain;
-                break;
+            //case eScoreEvent.mineGold:
+                //chain = chain * 2;
+                //scoreRun += chain;
+                //break;
         }
 
         switch (evt) {

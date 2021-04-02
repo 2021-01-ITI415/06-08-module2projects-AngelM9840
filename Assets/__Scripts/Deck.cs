@@ -15,9 +15,9 @@ public class Deck : MonoBehaviour {
 	public Sprite[] rankSprites;
 	
 	public Sprite cardBack;
-	public Sprite cardBackGold;
+	//public Sprite cardBackGold;
 	public Sprite cardFront;
-	public Sprite cardFrontGold;
+	//public Sprite cardFrontGold;
 	
 	
 	// Prefabs
@@ -159,9 +159,9 @@ public class Deck : MonoBehaviour {
 		for (int i=0; i<cardNames.Count; i++) {
 			GameObject cgo = Instantiate(prefabCard) as GameObject;
 			//GOLDCARDSTUFF
-			bool isGold = Random.value < 0.05f;
+			//bool isGold = Random.value < 0.05f;
 
-        	cgo.GetComponent<SpriteRenderer>().sprite = isGold ? cardFrontGold : cardFront;
+        	//cgo.GetComponent<SpriteRenderer>().sprite = isGold ? cardFrontGold : cardFront;
 			//GoldCardBack
 			//cgo.GetComponent<SpriteRenderer>().sprite = isGold ? cardBackGold : cardBack;
 
@@ -174,7 +174,7 @@ public class Deck : MonoBehaviour {
 			card.suit = card.name[0].ToString();
 			card.rank = int.Parse (card.name.Substring (1));
 			//GOLDCARDSTUFF
-			card.isGold = isGold;
+			//card.isGold = isGold;
 			
 			if (card.suit =="D" || card.suit == "H") {
 				card.colS = "Red";

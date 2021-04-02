@@ -234,13 +234,13 @@ public class Prospector : MonoBehaviour {
                 MoveToTarget(cd);
                 //GOLDCARDSTUFF
                 SetTableauFaces();
-                if (cd.isGold)
+                //if (cd.isGold)
+                //{
+               //     ScoreManager.EVENT(eScoreEvent.mineGold);
+               // }
+                //else
                 {
-                    ScoreManager.EVENT(eScoreEvent.mineGold);
-                }
-                else
-                {
-                    ScoreManager.EVENT(eScoreEvent.mine);
+                ScoreManager.EVENT(eScoreEvent.mine);
                 }
                 FloatingScoreHandler(eScoreEvent.mine);
                 break;
